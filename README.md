@@ -77,6 +77,23 @@ optional arguments:
 * Triplet Loss Paper: [Arxiv](https://arxiv.org/pdf/1503.03832.pdf)
 * TripletTorch Helper Module: [Github](https://github.com/TowardHumanizedInteraction/TripletTorch)
 
+## Work
+
+* Tester le programme pour voir son fonctionnement.
+* Apres avoir fait plusieurs recherche sur les différents models 
+  (plutot que de tous les tester car plus de 4h pour faire tourner le programme initial) 
+  je suis partit sur le Wide ResNet-101-2 qui d'apres la documentation torchvision est celui qui à le moins d'erreur donc le plus précis.
+  
+  ![models](models.png)
+  
+* J'ai donc ensuite lancer la création de notre modèle sur 10 epochs
+  (car apres plusieurs recherche avant on perd de la précision mais en faire plus ne permet pas d'en gagner de maniere significative.)
+  et par bash de 64 car le GPU fournit par colab permet de faires des bash plus grand.
+  qui nous crée notre model model.pt
+
+* On transforme ensuite notre modele en JIT compile grace au JIT.py qui nous permet d'obtenir un JIT_model.pt
+* Pour le moment du a la grosse taille des modèles je n'arrive pas a les push sur git même avec git-lfs
+
 ## Todo ( For the students )
 
 **Deadline Decembre 13th 2019 at 12pm**
